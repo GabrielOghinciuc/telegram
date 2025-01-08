@@ -12,12 +12,12 @@ TOKEN = '7241278780:AAGFQCYc_Um6tDtDYQHe99LfxAjZuatauOw'
 bot_username = '@DorelSmartBot'
 
 # API pentru vreme
-WEATHER_API_KEY = '0778fa7de75c6e39732bb45faf7e7e72'
+WEATHER_API_KEY = ''
 WEATHER_URL = 'https://api.openweathermap.org/data/2.5/weather'
 
 # Detalii pentru trimiterea unui email
-SENDER_EMAIL = "idkmlbb2004@gmail.com"  
-SENDER_PASSWORD = 'xjxi gcru fcls ajpn'
+SENDER_EMAIL = ""  
+SENDER_PASSWORD = ''
 DEFAULT_RECIPIENT = "idkmlbb2004@gmail.com"
 
 logging.basicConfig(
