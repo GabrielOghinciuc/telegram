@@ -8,7 +8,7 @@ from telegram.ext.filters import TEXT, COMMAND
 import logging
 
 # Token și username bot
-TOKEN = '7241278780:AAGFQCYc_Um6tDtDYQHe99LfxAjZuatauOw'
+TOKEN = ''
 bot_username = '@DorelSmartBot'
 
 # API pentru vreme
