@@ -7,7 +7,6 @@ from telegram.ext import MessageHandler,  Application, CommandHandler, ContextTy
 from telegram.ext.filters import TEXT, COMMAND
 import logging
 
-# Token și username bot
 TOKEN = ''
 bot_username = '@DorelSmartBot'
 
@@ -72,7 +71,6 @@ async def get_weather(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except Exception as e:
         await update.message.reply_text(f"A aparut o eroare la procesarea cererii: {e}")
 
-# Funcție pentru a seta un reminder
 async def set_reminder(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         time = int(context.args[0])
@@ -86,14 +84,12 @@ async def set_reminder(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except (IndexError, ValueError):
         await update.message.reply_text("Foloseste comanda astfel: /reminder [minute] [mesaj]")
 
-# Funcție pentru a trimite un email
 async def send_email(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         recipient = context.args[0] if context.args else DEFAULT_RECIPIENT
         subject = context.args[1] if len(context.args) > 1 else "Subiectul nu a fost specificat"
         message = ' '.join(context.args[2:]) if len(context.args) > 2 else "Mesajul nu a fost specificat"
 
-        # Creăm mesajul email
         msg = MIMEText(message)
         msg['Subject'] = subject
         msg['From'] = SENDER_EMAIL
